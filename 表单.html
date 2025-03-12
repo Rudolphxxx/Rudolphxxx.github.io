@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>注册表单</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .form-container {
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px dashed #ccc;
+      border-radius: 5px;
+    }
+    .form-container input[type="text"],
+    .form-container input[type="password"],
+    .form-container select,
+    .form-container textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      box-sizing: border-box;
+    }
+    .form-container input[type="radio"],
+    .form-container input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .form-container input[type="file"] {
+      margin-top: 10px;
+    }
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .form-container button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+<div class="form-container">
+  <form action="submit_form.php" method="post" enctype="multipart/form-data">
+    <label for="nickname">昵称：</label>
+    <input type="text" id="nickname" name="nickname" required>
+
+    <label for="password">密码：</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="email">邮箱：</label>
+    <select id="email" name="email">
+      <option value="qq.com">qq.com</option>
+      <option value="163.com">163.com</option>
+      <option value="126.com">126.com</option>
+      <option value="gmail.com">gmail.com</option>
+    </select>
+
+    <label>性别：</label>
+    <input type="radio" id="male" name="gender" value="male" checked>
+    <label for="male">男</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">女</label>
+
+    <label>爱好：</label>
+    <input type="checkbox" id="travel" name="hobbies" value="travel">
+    <label for="travel">旅游</label>
+    <input type="checkbox" id="photography" name="hobbies" value="photography">
+    <label for="photography">摄影</label>
+    <input type="checkbox" id="sports" name="hobbies" value="sports">
+    <label for="sports">运动</label>
+
+    <label for="bio">个人简介：</label>
+    <textarea id="bio" name="bio" rows="4"></textarea>
+
+    <label for="photo">上传个人照片：</label>
+    <input type="file" id="photo" name="photo" accept="image/*">
+
+    <button type="submit">立即注册</button>
+  </form>
+</div>
+</body>
+</html>
